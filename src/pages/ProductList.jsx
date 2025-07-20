@@ -21,6 +21,11 @@ const ProductList = () => {
                   : 'Our Products'}
       </h2>
 
+      <div className="row">
+        <span className=''><i className='bi bi-filter'></i>filter</span>
+        <span className=''></span>
+      </div>
+
       {filteredProducts.length === 0 ? (
         <p className="text-center text-muted">
           No products found in this category.
@@ -28,7 +33,7 @@ const ProductList = () => {
       ) : (
         <div className="row">
           {filteredProducts.map((product, idx) => (
-            <div key={idx} className="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div key={idx} className="col-6 col-md-4 col-lg-3 mb-4">
               <ProductCard product={product} />
             </div>
           ))}

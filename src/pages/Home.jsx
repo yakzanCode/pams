@@ -1,12 +1,32 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
-  return (
-    <div className="text-center">
-      <h1>Welcome to BabyShop 👶</h1>
-      <p className="lead">Browse our handpicked essentials for little ones!</p>
-    </div>
-  );
+  const navigate = useNavigate();
+
+    return (
+        <section
+            className="position-relative vh-100"
+            style={{
+                backgroundImage: "url('src/assets/hero.webp')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}
+        >
+            <div className="position-absolute top-0 bottom-0 end-0 p-4 text-end">
+                <h2 className="text-white fw-bold mb-3">New Arrivals</h2>
+                <div className="d-flex flex-column align-items-end gap-2">
+                    <button onClick={() => navigate('/products')} className="btn btn-light btn-sm">
+                        Shop Products
+                    </button>
+                    <button onClick={() => navigate('/products')} className="btn btn-outline-light btn-sm">
+                        View All Products
+                    </button>
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default Home;

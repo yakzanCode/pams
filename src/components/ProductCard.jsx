@@ -29,7 +29,7 @@ function ProductCard({ product }) {
   return (
     <div className="card border-0 text-center mb-3" style={{ maxWidth: '540px' }}>
       <div className="row g-0">
-        <div className="col-12">
+        <div className="col-12 bg-warning-subtle">
           <img
             src={product.Image || '/src/assets/image.webp'}
             alt={product.Name}
@@ -37,12 +37,43 @@ function ProductCard({ product }) {
           />
         </div>
         <div className="col-12">
-          <div className="card-body">
+          <div className="card-body px-3 text-start">
             <h5 className="card-title">{product.Name}</h5>
-            <p className="card-text m-0">{product.Description}</p>
-            <p className="card-text m-0">
+            {/* <p className="card-text m-0">{product.Description}</p> */}
+            <p className="card-text">
               <small className="fw-bold">${product.Price}</small>
             </p>
+
+            {/* {product.Rating && (
+              <div className="">
+                {renderStars(product.Rating)}
+                <small className="text-muted ms-2">({product.RatingCount})</small>
+              </div>
+            )} */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+export default ProductCard;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             {/* <div className="d-flex gap-2 my-1 flex-wrap justify-content-center">
               {sizes.map((size, idx) => (
                 <button
@@ -66,17 +97,3 @@ function ProductCard({ product }) {
                 />
               ))}
             </div> */}
-
-            {product.Rating && (
-              <div className="mt-1">
-                {renderStars(product.Rating)}
-                <small className="text-muted ms-2">({product.RatingCount})</small>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-export default ProductCard;
