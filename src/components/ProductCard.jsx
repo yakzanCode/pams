@@ -8,7 +8,7 @@ function ProductCard({ product }) {
 
   const colors = product.AvailableColors.split(',').map(c => c.trim());
 
-    const renderStars = (rating) => {
+  const renderStars = (rating) => {
     const full = Math.floor(rating);
     const half = rating % 1 >= 0.5;
     const empty = 5 - full - (half ? 1 : 0);
@@ -31,7 +31,7 @@ function ProductCard({ product }) {
       <div className="row g-0">
         <div className="col-12 bg-warning-subtle">
           <img
-            src={product.Image || '/src/assets/image.webp'}
+            src={product.Image || '/assets/image.webp'}
             alt={product.Name}
             className="img-fluid rounded-start"
           />
@@ -39,11 +39,24 @@ function ProductCard({ product }) {
         <div className="col-12">
           <div className="card-body px-3 text-start">
             <h5 className="card-title">{product.Name}</h5>
-            {/* <p className="card-text m-0">{product.Description}</p> */}
-            <p className="card-text">
-              <small className="fw-bold">${product.Price}</small>
-            </p>
+            <p className="card-text m-0">{product.Description}</p>
+            <div className="card-text d-flex">
 
+              <p className="fw-bold me-4">${product.Price}</p>
+
+              <div className="d-flex gap-1 mt-2 mx-3 justify-content-center">
+                {colors.map((color, idx) => (
+                  <p
+                    key={idx} title={color}
+                    className="btn btn-sm rounded-pill p-0"
+                    style={{
+                      width: '14px', height: '14px',
+                      backgroundColor: color.toLowerCase()
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
             {/* {product.Rating && (
               <div className="">
                 {renderStars(product.Rating)}
@@ -74,7 +87,7 @@ export default ProductCard;
 
 
 
-            {/* <div className="d-flex gap-2 my-1 flex-wrap justify-content-center">
+{/* <div className="d-flex gap-2 my-1 flex-wrap justify-content-center">
               {sizes.map((size, idx) => (
                 <button
                   key={idx} type="button"

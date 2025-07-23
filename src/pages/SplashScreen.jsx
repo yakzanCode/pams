@@ -40,7 +40,7 @@ function SplashScreen() {
     >
       {/* Loader*/}
       <img
-        src="src/assets/loader4.gif"
+        src="/assets/loader4.gif"
         alt="Loading"
         style={{
           position: 'absolute',

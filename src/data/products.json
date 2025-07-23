@@ -2,7 +2,7 @@
   {
     "Name": "Dino Costume",
     "Category": "Clothing",
-    "CategoryImage": "src/assets/clothing.avif",
+    "CategoryImage": "/assets/clothing.avif",
     "Description": "Soft dinosaur costume with hood and tail",
     "Price": "29.99",
     "IsFeatured": "TRUE",
@@ -16,7 +16,7 @@
   {
     "Name": "Unicorn Pajamas",
     "Category": "Clothing",
-    "CategoryImage": "src/assets/clothing.avif",
+    "CategoryImage": "/assets/clothing.avif",
     "Description": "Cozy pajamas with unicorn print",
     "Price": "25.99",
     "IsFeatured": "FALSE",
@@ -30,7 +30,7 @@
   {
     "Name": "Baby Air Helmet",
     "Category": "Safety",
-    "CategoryImage": "src/assets/safety.jpg",
+    "CategoryImage": "/assets/safety.jpg",
     "Description": "Airbag helmet for babies that inflates during falls",
     "Price": "49.99",
     "IsFeatured": "TRUE",
@@ -44,7 +44,7 @@
   {
     "Name": "Corner Guards Set",
     "Category": "Safety",
-    "CategoryImage": "src/assets/safety.jpg",
+    "CategoryImage": "/assets/safety.jpg",
     "Description": "Soft corner protectors to avoid bumps and bruises",
     "Price": "12.99",
     "IsFeatured": "FALSE",
@@ -58,7 +58,7 @@
   {
     "Name": "Toddler Spoon Set",
     "Category": "Essentials",
-    "CategoryImage": "src/assets/essentials.jpg",
+    "CategoryImage": "/assets/essentials.jpg",
     "Description": "Self-feeding spoon set with soft handles",
     "Price": "9.50",
     "IsFeatured": "FALSE",
@@ -72,7 +72,7 @@
   {
     "Name": "Silicone Bib Pack",
     "Category": "Essentials",
-    "CategoryImage": "src/assets/essentials.jpg",
+    "CategoryImage": "/assets/essentials.jpg",
     "Description": "Easy-to-clean silicone bibs with food catcher",
     "Price": "14.99",
     "IsFeatured": "FALSE",
@@ -86,7 +86,7 @@
   {
     "Name": "Alphabet Flashcards",
     "Category": "Learning",
-    "CategoryImage": "src/assets/learning.jpg",
+    "CategoryImage": "/assets/learning.jpg",
     "Description": "Colorful flashcards to learn the alphabet and sounds",
     "Price": "11.99",
     "IsFeatured": "TRUE",
@@ -100,7 +100,7 @@
   {
     "Name": "Stacking Rings Toy",
     "Category": "Learning",
-    "CategoryImage": "src/assets/learning.jpg",
+    "CategoryImage": "/assets/learning.jpg",
     "Description": "Classic stacking toy for color and size recognition",
     "Price": "15.00",
     "IsFeatured": "FALSE",

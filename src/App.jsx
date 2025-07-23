@@ -10,6 +10,7 @@ import ErrorPage from './pages/error';
 import PromoBar from './components/Promobar';
 import SplashScreen from './pages/SplashScreen';
 
+
 function App() {
   const [showSplash, setShowSplash] = useState(true);
 
@@ -42,7 +43,7 @@ function App() {
       </div>
 
       {/* Always render SplashScreen, but hide after 6 seconds */}
-      {showSplash && <SplashScreen />}
+      {/* {showSplash && <SplashScreen />} */}
     </>
 
   );

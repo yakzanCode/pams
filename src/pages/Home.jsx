@@ -8,7 +8,7 @@ function Home() {
         <section
             className="position-relative vh-100"
             style={{
-                backgroundImage: "url('src/assets/hero.webp')",
+                backgroundImage: "url('/assets/hero.webp')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'

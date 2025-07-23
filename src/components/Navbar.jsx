@@ -24,7 +24,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-md bg-body-secondary shadow-sm sticky-top">
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <NavLink to="/" className="navbar-brand fw-bold">
-            <img src="src/assets/logo.svg" alt="CozyKidy" width="170" />
+            <img src="/assets/logo.svg" alt="CozyKidy" width="170" />
           </NavLink>
 
           <div className="d-flex align-items-center me-md-2 order-md-3">

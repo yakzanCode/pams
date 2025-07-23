@@ -22,7 +22,7 @@ function Sidebar() {
     <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div className="offcanvas-header">
         <p className="offcanvas-title mx-auto mt-4" id="offcanvasExampleLabel">
-          <img src="src/assets/logo.svg" alt="CozyKidz" width="200px"/>
+          <img src="/assets/logo.svg" alt="CozyKidz" width="200px"/>
         </p>
         <button type="button" className="btn-close position-absolute top-0 end-0 m-1" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
