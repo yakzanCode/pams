@@ -27,35 +27,33 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="card border-0 text-center mb-3" style={{ maxWidth: '540px' }}>
+    <div className="card border-0 text-center">
       <div className="row g-0">
-        <div className="col-12 bg-warning-subtle">
+        <div className="col-12 bg-body-secondary">
           <img
             src={product.Image || '/assets/image.webp'}
             alt={product.Name}
-            className="img-fluid rounded-start"
+            className="w-100 px-4 py-5"
           />
         </div>
         <div className="col-12">
-          <div className="card-body px-3 text-start">
-            <h5 className="card-title">{product.Name}</h5>
-            <p className="card-text m-0">{product.Description}</p>
-            <div className="card-text d-flex">
-
-              <p className="fw-bold me-4">${product.Price}</p>
-
-              <div className="d-flex gap-1 mt-2 mx-3 justify-content-center">
-                {colors.map((color, idx) => (
-                  <p
-                    key={idx} title={color}
-                    className="btn btn-sm rounded-pill p-0"
-                    style={{
-                      width: '14px', height: '14px',
-                      backgroundColor: color.toLowerCase()
-                    }}
-                  />
-                ))}
-              </div>
+          <div className="pt-2 text-start" style={{ fontSize: '14px' }}>
+            <h5 className='m-0' style={{ fontSize: '14px' }}>{product.Name} | {product.Category}</h5>
+            <div>
+              <span className="fw-bold me-3">${product.Price}</span>
+              <span className="fw-bold text-body-secondary text-decoration-line-through">${product.PriceBeforeSale}</span>
+            </div>
+            <div className="d-flex gap-1 pt-1">
+              {colors.map((color, idx) => (
+                <span
+                  key={idx} title={color}
+                  className="btn btn-sm border rounded-pill p-0"
+                  style={{
+                    width: '14px', height: '14px',
+                    backgroundColor: color.toLowerCase()
+                  }}
+                />
+              ))}
             </div>
             {/* {product.Rating && (
               <div className="">

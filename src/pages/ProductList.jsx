@@ -7,31 +7,59 @@ import products from '../data/products.json';
 
 
 const sliderSettings = {
-  dots: true,
+  className: 'center',
+  centerMode: true,
   infinite: true,
   speed: 500,
-  // fade: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: '30px',
+  slidesToShow: 5,
+  centerPadding: '60px',
   arrows: true,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 1400, // Large screens
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 5,
+        centerPadding: '60px',
       },
     },
     {
-      breakpoint: 576,
+      breakpoint: 1200, // Medium desktops
+      settings: {
+        slidesToShow: 3,
+        centerPadding: '120px',
+      },
+    },
+    {
+      breakpoint: 900, // Tablets & smaller laptops
+      settings: {
+        slidesToShow: 3,
+        centerPadding: '30px',
+      },
+    },
+    {
+      breakpoint: 770, // Landscape phones / tablets
       settings: {
         slidesToShow: 1,
-        centerPadding: '60px',
+        centerPadding: '200px',
+      },
+    },
+    {
+      breakpoint: 670, // Smaller tablets & large phones
+      settings: {
+        slidesToShow: 1,
+        centerPadding: '150px',
+      },
+    },
+    {
+      breakpoint: 576, // Most phones
+      settings: {
+        slidesToShow: 1,
+        centerPadding: '100px',
       },
     },
   ],
 };
+
 
 
 const ProductList = () => {
@@ -66,7 +94,7 @@ const ProductList = () => {
   const breadcrumbText = ['Home', ...pathSegments].join(' / ');
 
   return (
-    <div className="container my-4">
+    <div className="container-fluid my-4">
       <p className="text-muted mb-1">{breadcrumbText}</p>
 
       <h2 className="mb-4 text-start">
@@ -105,21 +133,33 @@ const ProductList = () => {
       <h3 className="mt-5 mb-3 text-center">Explore Other Categories</h3>
       <Slider {...sliderSettings}>
         {filteredCategories.map((cat, idx) => (
-          <div key={idx} className="text-center bg-light pb-2">
-            <div className='mx-2 bg-warning-subtle'>
+          <div key={idx} className="text-center">
+            <div className="category-slide mx-2 rounded-3 d-flex flex-column" >
               <img
-                src={cat.image}
+                src={cat.gif}
                 alt={cat.name}
-                className="img-fluid bg-danger"
-                style={{ height: '100%', objectFit: 'cover' }}
+                className="rounded-3 w-100"
+                style={{ objectFit: 'cover' }}
               />
-              <p className="my-4 fs-4">{cat.name}</p>
-              <button className='btn btn-dark mb-4 rounded-0 px-4 py-2'>view {cat.name} products</button>
+              <div className="card mt-auto w-100" >
+                <div className="row g-0 p-1 h-100">
+                  <div className="col-3 h-100">
+                    <img src={cat.image} style={{ objectFit: 'cover' }} className=" w-75 h-100 rounded-start" alt="..." />
+                  </div>
+                  <div className="col-9 h-100">
+                    <div className="fw-bold h-100 text-start" style={{ fontSize: '10px' }}>
+                      <p>{cat.name}</p>
+                      <p>14$</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
           </div>
         ))}
       </Slider>
+
 
     </div>
   );

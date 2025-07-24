@@ -25,17 +25,37 @@
   pointer-events: auto;
 }
 
+.center {
+  height: 80vh;
+  align-items: center;
+  display: flex;
+}
+
+.center .slick-slide .category-slide {
+  height: 60vh;
+  transition: all 0.3s ease;
+  align-self: center;
+  align-items: center;
+  display: flex;
+}
+
+.center .slick-slide .category-slide img {
+  height: 50vh;
+}
+
+.center .slick-slide .category-slide .card {
+  height: 9vh;
+}
 
 
+.center .slick-center .category-slide {
+  height: 76vh;
+}
 
+.center .slick-center .category-slide img {
+  height: 65vh;
+}
 
-/* .nav-img {
-  width: 120px;
-  height: 150px;
-  object-fit: cover;
-} */
-
-/* .nav-img:hover {
-  width: 130px;
-  height: 160px;
-} */
+.center .slick-center .category-slide .card {
+  height: 10vh;
+}
