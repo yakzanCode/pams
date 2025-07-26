@@ -29,11 +29,11 @@ function ProductCard({ product }) {
   return (
     <div className="card container-fluid border-0 rounded-0 p-1 text-center">
       <div className="row g-2">
-        <div className="col-12 bg-body-secondary">
+        <div className="col-12 bg-body-secondary  m-auto d-felx p-0" style={{aspectRatio:'4/5'}}>
           <img
             src={product.Image || '/assets/image.webp'}
             alt={product.Name}
-            className="w-100 px-4 py-5"
+            className="w-100 h-100"
             style={{objectFit:'cover'}}
           />
         </div>

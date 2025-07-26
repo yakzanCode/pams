@@ -58,3 +58,9 @@
 .center .slick-center .category-slide .card {
   height: 10vh;
 }
+
+
+
+.cstmrow {
+  --bs-gutter-x: 0;
+}

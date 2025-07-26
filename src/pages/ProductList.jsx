@@ -63,10 +63,10 @@ const ProductList = () => {
   );
 
   return (
-    <div className="container-fluid mb-4 px-4">
+    <div className="container-fluid mb-4 px-2">
 
       {/* Breadcrumb */}
-      <p className="text-muted m-0 pt-1">{breadcrumbText}</p>
+      <p className="text-muted m-0 py-2">{breadcrumbText}</p>
 
       {/* Mobile Header Image */}
       <div className="row">
@@ -89,7 +89,7 @@ const ProductList = () => {
       </h2>
 
       {/* Filter and Sort Row */}
-      <div className="row py-1 mb-2 align-items-center">
+      <div className="row pt-3 align-items-center">
         <div className='col-6'>
           <button onClick={() => setShowFilters(!showFilters)} className='btn btn-outline-dark rounded-0 py-1'>
             <svg className="icon icon-filter w1" strokeWidth="var(--icon-stroke-width)" stroke="currentColor" width="20" height="10" viewBox="0 0 20 10" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
@@ -103,13 +103,12 @@ const ProductList = () => {
       </div>
 
       {/* Filters and Products */}
-      <div className="container-fluid">
-      <div className="row ms-0 me-0" style={{marginLeft:'0',marginRight:'0'}}>
+      <div className="container-fluid p-0">
+      <div className="row">
         {/* Filters */}
         {showFilters && (
-          <div className="col-sm-4 col-md-3 col-lg-2">
+          <div className="col-4 col-md-3 col-lg-2">
             <h6>Filter</h6>
-
             {/* Age Filter */}
             <div className="mt-2 border-top pt-2">
               <h6>Age:</h6>
@@ -172,17 +171,16 @@ const ProductList = () => {
                 <option value="rating-high-low">Top Rated</option>
               </select>
             </div>
-
           </div>
         )}
 
         {/* Product List */}
-        <div className={`row g-3 ${showFilters ? 'col-12 col-sm-8 col-md-9 col-lg-10' : 'col-12'}`}>
+        <div className='row g-3 mx-auto col-8 col-md-9 col-lg-10'>
           {sortedProducts.length === 0 ? (
             <p className="text-center text-muted">No products found.</p>
           ) : (
             sortedProducts.map((product, idx) => (
-              <div key={idx} className={`mb-4 ${showFilters ? 'col-6 ' : 'col-4 col-xl-3'} col-md-3 `}>
+              <div key={idx} className={`mb-4 ${showFilters ? 'col-6 ' : 'col-6 col-sm-4 col-xl-3'} col-md-3 `}>
                 <ProductCard product={product} />
               </div>
             ))
