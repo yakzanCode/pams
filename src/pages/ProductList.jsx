@@ -15,7 +15,7 @@ const ProductList = () => {
   );
   const [selectedAges, setSelectedAges] = useState([]);
   const [sortOption, setSortOption] = useState('');
-  const [showFilters, setShowFilters] = useState(true);
+  const [showFilters, setShowFilters] = useState(false);
 
   // Filter products based on category and age
   const filteredProducts = products.filter((product) => {
@@ -108,9 +108,8 @@ const ProductList = () => {
         {/* Filters */}
         {showFilters && (
           <div className="col-4 col-md-3 col-lg-2">
-            <h6>Filter</h6>
             {/* Age Filter */}
-            <div className="mt-2 border-top pt-2">
+            <div className="mt-2 pt-2">
               <h6>Age:</h6>
               {ages.map((age) => (
                 <div key={age} className="form-check">
@@ -175,7 +174,7 @@ const ProductList = () => {
         )}
 
         {/* Product List */}
-        <div className={`row g-3 mx-auto ${showFilters ? 'col-8 col-md-9 col-lg-10' : 'col-12'}`}>
+        <div className={`row g-3 mx-auto my-0 ${showFilters ? 'col-8 col-md-9 col-lg-10' : 'col-12'}`}>
           {sortedProducts.length === 0 ? (
             <p className="text-center text-muted">No products found.</p>
           ) : (

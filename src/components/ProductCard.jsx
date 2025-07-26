@@ -27,24 +27,23 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="card container-fluid border-0 rounded-0 p-1 text-center">
-      <div className="row g-2">
-        <div className="col-12 bg-body-secondary  m-auto d-felx p-0" style={{aspectRatio:'4/5'}}>
+    <div className="card container-fluid border-0 rounded-0 p-0 text-center h-100">
+        <div className="row p-0 m-0 bg-body-secondary" style={{aspectRatio:'4/5'}}>
           <img
             src={product.Image || '/assets/image.webp'}
             alt={product.Name}
-            className="w-100 h-100"
+            className="w-100 h-100 p-0"
             style={{objectFit:'cover'}}
           />
         </div>
-        <div className="col-12">
-          <div className="pt-2 text-start" style={{ fontSize: '14px' }}>
-            <h5 className='m-0' style={{ fontSize: '14px' }}>{product.Name} | {product.Category}</h5>
-            <div>
+        <div className="row p-0 m-0 h-100">
+          <div className="p-0 pt-1 d-flex flex-column" style={{ fontSize: '14px' }}>
+            <h5 className='m-0 mt-1' style={{ fontSize: '14px' }}>{product.Name} | {product.Category}</h5>
+            <div className='my-1 mt-auto'>
               <span className="fw-bold me-3">${product.Price}</span>
               <span className="fw-bold text-body-secondary text-decoration-line-through">${product.PriceBeforeSale}</span>
             </div>
-            <div className="d-flex gap-1 pt-1">
+            <div className="d-flex gap-1 mx-auto">
               {colors.map((color, idx) => (
                 <span
                   key={idx} title={color}
@@ -64,7 +63,6 @@ function ProductCard({ product }) {
             )} */}
           </div>
         </div>
-      </div>
     </div>
   );
 }
