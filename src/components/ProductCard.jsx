@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function ProductCard({ product }) {
+function ProductCard({ product }) {  
   // Convert AvailableSizes string to array safely
   const sizes = Array.isArray(product.AvailableSizes)
     ? product.AvailableSizes
@@ -27,13 +27,14 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="card border-0 text-center">
-      <div className="row g-0">
+    <div className="card container-fluid border-0 rounded-0 p-1 text-center">
+      <div className="row g-2">
         <div className="col-12 bg-body-secondary">
           <img
             src={product.Image || '/assets/image.webp'}
             alt={product.Name}
             className="w-100 px-4 py-5"
+            style={{objectFit:'cover'}}
           />
         </div>
         <div className="col-12">

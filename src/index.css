@@ -39,7 +39,7 @@
   display: flex;
 }
 
-.center .slick-slide .category-slide img {
+.center .slick-slide .category-slide video {
   height: 50vh;
 }
 
@@ -47,12 +47,11 @@
   height: 9vh;
 }
 
-
 .center .slick-center .category-slide {
   height: 76vh;
 }
 
-.center .slick-center .category-slide img {
+.center .slick-center .category-slide video {
   height: 65vh;
 }
 

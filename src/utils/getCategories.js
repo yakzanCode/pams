@@ -5,7 +5,7 @@ export function getUniqueCategories(products) {
     if (!categoriesMap.has(product.Category)) {
       categoriesMap.set(product.Category, {
         image: product.CategoryImage,
-        gif: product.CategoryGif,
+        vid: product.CategoryVideo,
       });
     }
   });
@@ -13,6 +13,6 @@ export function getUniqueCategories(products) {
   return Array.from(categoriesMap, ([name, value]) => ({
     name,
     image: value.image,
-    gif: value.gif,
+    vid: value.vid,
   }));
 }
