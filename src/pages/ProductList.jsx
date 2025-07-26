@@ -175,7 +175,7 @@ const ProductList = () => {
         )}
 
         {/* Product List */}
-        <div className='row g-3 mx-auto col-8 col-md-9 col-lg-10'>
+        <div className={`row g-3 mx-auto ${showFilters ? 'col-8 col-md-9 col-lg-10' : 'col-12'}`}>
           {sortedProducts.length === 0 ? (
             <p className="text-center text-muted">No products found.</p>
           ) : (
